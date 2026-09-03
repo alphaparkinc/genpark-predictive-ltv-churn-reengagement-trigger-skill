@@ -1,0 +1,42 @@
+{
+  "name": "genpark-predictive-ltv-churn-reengagement-trigger-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Predictive customer lifetime value (pLTV) churn probability scorer and automated VIP re-engagement campaign trigger.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "merchant-commerce",
+  "tags": [
+    "klaviyo",
+    "omnisend",
+    "churn-prediction",
+    "pltv",
+    "retention-marketing"
+  ],
+  "inputs": {
+    "customer_id": {
+      "type": "string"
+    },
+    "days_since_last_order": {
+      "type": "integer"
+    },
+    "historical_purchase_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "reengagement_job_id": {
+      "type": "string"
+    },
+    "churn_probability_score": {
+      "type": "number"
+    },
+    "churn_risk_tier": {
+      "type": "string"
+    },
+    "campaign_workflow_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
